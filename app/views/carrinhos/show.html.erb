@@ -1,0 +1,36 @@
+<table width="660" border="0">
+  <tr>
+    <th colspan="" bgcolor="#C9E6FF"><h1>Carrinho</h1></th>
+  </tr>
+  <tr>
+    <td align="center"><%= image_tag @produto.pimg, :height => "10%" %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+
+
+
+  <tr>
+    <td width="400" align="left" rowspan="3"><%= image_tag @produto.pimg %></td>
+    <td bgcolor="#D0E2FF"><h5>Descrição: <br /><%= @produto.pdescri %></h5></td>
+  </tr>
+  <tr>
+    <td bgcolor="#D0E2FF"><h5>Valor: <br />R$<%= @produto.pvalor %></h5>
+  </tr>
+  <tr>
+    <td bgcolor="#D0E2fc" align="center"><strong><%= link_to 'Comprar', @produto %></strong></td>
+  </tr>
+  <tr>
+    <th colspan="5" bgcolor="#C9E6FF" align="left"><h3>Comente este produto:</h3></th>
+  </tr>
+  <tr>
+    <th colspan="5" align="left"><%= render 'comentarios/form' %></th>
+  </tr>
+  <tr>
+    <th colspan="5" bgcolor="#C9E6FF"><h2>Comentários:</h2></th>
+  </tr>
+  <tr>
+    <th colspan="5" align="left"><%= render @produto.comentarios %></th>
+  </tr>
+</table>

@@ -1,0 +1,33 @@
+<h1>Produto</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pnome:</b>
+  <%= @produto.pnome %>
+</p>
+
+<p>
+  <b>Pdescri:</b>
+  <%= @produto.pdescri %>
+</p>
+
+<p>
+  <b>Pvalor:</b>
+  <%= @produto.pvalor %>
+</p>
+
+<p>
+  <b>Pimg:</b>
+  <%= @produto.pimg %>
+</p>
+
+<h2>Comentários</h2>
+<%= render @produto.comentarios %>
+
+<h2>Faça seu comentário sobre este produto:</h2>
+<%= render "comentarios/form" %>
+
+<br />
+
+<%= link_to 'Edit', edit_produto_path(@produto) %> |
+<%= link_to 'Back', produtos_path %>

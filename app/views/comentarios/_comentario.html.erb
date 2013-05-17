@@ -1,0 +1,16 @@
+<div style="background-color:#eeeeee;">
+<p>
+    <b>Nick:</b>
+    <%= comentario.nick %>
+</p>
+ 
+<p>
+    <b>Comentário:</b>
+    <%= comentario.corpo %>
+</p>
+<p>
+	<%= link_to "Excluir Comentário", [comentario.produto, comentario], 
+				:confirm => 'Tem certeza?', 
+				:method => :delete %>
+</p>
+</div>

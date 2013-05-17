@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pnome: MyString
+  pdescri: MyText
+  pvalor: 9.99
+  pimg: MyText
+
+two:
+  pnome: MyString
+  pdescri: MyText
+  pvalor: 9.99
+  pimg: MyText

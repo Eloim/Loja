@@ -1,0 +1,20 @@
+<table width="660" border="0">
+  <tr>
+    <th colspan="5" bgcolor="#C9E6FF" scope="col"><h1>Produtos</h1></th>
+  </tr>
+  <% @produtos.each do |produto| %>
+  <tr><th colspan="5">&nbsp;</th></tr>
+  <tr>
+    <th scope="col"><%= produto.pnome %></th>
+  </tr>
+  <tr>
+    <td width="200" align="center"><%= image_tag produto.pimg, :height => "40%" %></td>
+  </tr>
+  <tr>
+    <td bgcolor="#D0E2FF"><h5>Descrição: <%= produto.pdescri %></h5></td>
+  </tr>
+  <tr>
+    <td bgcolor="#D0E2fc" height="20" align="right"><strong><%= link_to '+ Detalhes', produto %></strong></td>
+  </tr>
+  <% end %>
+</table>
