@@ -10,7 +10,7 @@
     <td bgcolor="#D0E2FF"><h5>Valor: <br />R$<%= @produto.pvalor %></h5>
   </tr>
   <tr>
-    <td bgcolor="#D0E2fc" align="center"><strong><%= link_to 'Comprar', @produto %></strong></td>
+    <td bgcolor="#D0E2fc" align="center"><strong><%= link_to 'Adicionar ao carrinho', :action => 'add_to_cart' %></strong></td>
   </tr>
   <tr>
     <th colspan="5" bgcolor="#C9E6FF" align="left"><h3>Comente este produto:</h3></th>

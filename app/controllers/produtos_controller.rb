@@ -1,4 +1,19 @@
 class ProdutosController < ApplicationController
+
+  def add_to_cart
+    produto = Produto.find(params[:id])
+    @cart = find_cart
+    @cart.add_produto(produto)
+    redirect_to :action => "mostrar_carro"
+  end
+
+
+  def mostrar_carro 
+    @cart = find_cart
+    @items = @cart.items 
+  end
+
+
   # GET /produtos
   # GET /produtos.json
   def index

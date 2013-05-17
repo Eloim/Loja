@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130516030240) do
+ActiveRecord::Schema.define(:version => 20130517214907) do
 
   create_table "carrinhos", :force => true do |t|
     t.integer  "quantidade"
@@ -36,6 +36,16 @@ ActiveRecord::Schema.define(:version => 20130516030240) do
 
   add_index "comentarios", ["produto_id"], :name => "index_comentarios_on_produto_id"
   add_index "comentarios", ["user_id"], :name => "index_comentarios_on_user_id"
+
+  create_table "line_items", :force => true do |t|
+    t.integer  "quantidade"
+    t.decimal  "preco"
+    t.integer  "produto_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "line_items", ["produto_id"], :name => "index_line_items_on_produto_id"
 
   create_table "produtos", :force => true do |t|
     t.string   "pnome"
